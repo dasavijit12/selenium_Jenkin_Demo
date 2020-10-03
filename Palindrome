@@ -1,0 +1,27 @@
+import java.util.*;
+public class Palindrome {
+
+	public static void main(String[] args) {
+		int num,n,rem,sum=0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a number to check whether it is a palindrome or not");
+		num=sc.nextInt();
+		n=num;
+		while(num!=0)
+		{
+			rem=num%10;
+			sum=(sum*10)+rem;
+			num=num/10;
+		}
+		
+		if(n==sum)
+		{
+			System.out.println(sum+" is a palindrome number");
+		}
+		else {
+			System.out.println(sum+" is not a palindrome number");
+		}
+
+	}
+
+}
